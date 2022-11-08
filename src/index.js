@@ -1,21 +1,31 @@
 import './style.css';
 import './to-go-bg.jpg';
 
-const taskInput = document.getElementById('input-task');
-const addBtn = document.getElementById('add-task');
+const tasks = [
+  {
+    description: 'creat repo',
+    completed: false,
+    index: 0,
+  },
+  {
+    description: 'read book',
+    completed: true,
+    index: 1,
+  },
+];
 
-class Todo {
-  constructor(description, index, completed = false) {
-    this.description = description;
-    this.index = index;
-    this.completed = completed;
+const listFunc = () => {
+  const taskContent = document.querySelector('#task-container');
+  for (let i = 0; i < tasks.length; i += 1) {
+    const task = document.createElement('div');
+    task.classList.add('task');
+    task.innerHTML = `
+    <button class="checkTask"><i class="fa-solid fa-check"></i></button>
+    <label for="${tasks.index}" contentEditable="true">${tasks[i].description}</label>
+    <button class="deleteTask"><i class="fa-solid fa-trash-can"></i></button>
+    `;
+    taskContent.appendChild(task);
   }
-}
+};
 
-addBtn.addEventListener('click', () => {
-  if (taskInput.value !== '') {
-    const todolist = new Todo(taskInput.value, 0);
-    localStorage.setItem('todolists', JSON.stringify(todolist));
-    taskInput.value = '';
-  }
-});
+listFunc();

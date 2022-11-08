@@ -47,7 +47,8 @@ section {
   padding: 10px 0 10px 10px;
 }
 
-#add-task-container {
+#add-task-container,
+.task {
   width: 100%;
   border: none;
   background: #fff;
@@ -76,7 +77,7 @@ input:hover {
 #add-task {
   flex: 0.1;
   transition: 0.3s;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   padding: 5px;
   background-color: #fff;
   color: green;
@@ -91,18 +92,50 @@ input:hover {
 }
 
 .task {
-  width: 100%;
+  width: 98%;
   background-color: #fff;
   box-shadow: 0 0 3px;
   padding: 5px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.task li {
-  list-style: none;
-  flex: 5;
-  border-bottom: #4d0418;
+.task label {
+  flex: 4;
+  font-size: 1.3rem;
+  margin: 5px;
+}
+
+.task button {
+  flex: 0.3;
+  border-radius: 10px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.task .checkTask {
+  color: orange;
+  margin-right: 10px;
+  border: 2px solid orange;
+  font-size: 1.3rem;
+}
+
+.task .checkTask:hover {
+  color: #fff;
+  background-color: orange;
+}
+
+.task .deleteTask {
+  color: red;
+  margin-right: 10px;
+  border: 2px solid red;
+  font-size: 1.3rem;
+}
+
+.task .deleteTask:hover {
+  color: #fff;
+  background: red;
 }
 
 .clear-all {
