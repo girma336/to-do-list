@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Tangerine', sans-serif;
+  background: url('./to-go-bg.jpg') no-repeat center center/ cover;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 20px;
+  background-color: black;
+}
+
+section {
+  width: 50%;
+  background: #fff;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px;
+}
+
+.header-1 {
+  width: 100%;
+  box-sizing: 0 0 3px;
+  border: 2px solid black;
+  border-left: none;
+  border-right: none;
+}
+
+.header-1 p {
+  text-align: start;
+  font-size: 16px;
+  font-weight: 700;
+  background-image: linear-gradient(45deg, #4d0418, #eb1d1d, rgb(214, 146, 57), #eb1d1d);
+  color: transparent;
+  -webkit-background-clip: text;
+  padding: 10px 0 10px 10px;
+}
+
+#add-task-container {
+  width: 100%;
+  border: none;
+  background: #fff;
+  border-bottom: 2px solid #4d0418;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  display: flex;
+  box-shadow: 0 0 3px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  flex: 5;
+  font-size: 1.2rem;
+  margin: 5px;
+  border: none;
+}
+
+input:hover {
+  border: none;
+}
+
+#add-task {
+  flex: 0.1;
+  transition: 0.3s;
+  font-size: 1.2rem;
+  padding: 5px;
+  background-color: #fff;
+  color: green;
+  border: 2px solid green;
+  border-radius: 10px;
+  margin-right: 5px;
+}
+
+#add-task:hover {
+  background-color: green;
+  color: #fff;
+}
+
+.task {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 3px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.task li {
+  list-style: none;
+  flex: 5;
+  border-bottom: #4d0418;
+}
+
+.clear-all {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0;
+  border: 1px solid black;
+  box-shadow: 0 0 3px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background: rgb(254, 241, 241);
+  color: rgb(146, 24, 24);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  section {
+    width: 80%;
+  }
+}
