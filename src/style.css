@@ -143,6 +143,12 @@ input:hover {
   background-color: orange;
 }
 
+.task .decor {
+  background-color: #fff;
+  color: rgb(77, 255, 0);
+  border: 2px solid green;
+}
+
 .task .deleteTask {
   color: red;
   margin-right: 5px;
