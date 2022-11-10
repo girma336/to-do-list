@@ -1,31 +1,35 @@
 import './style.css';
 import './to-go-bg.jpg';
+import populateTodo from './modules/populateTodo.js';
+import saveTodo from './modules/saveTodo.js';
+import Todo from './modules/Todo.js';
 
-const tasks = [
-  {
-    description: 'creat repo',
-    completed: false,
-    index: 0,
-  },
-  {
-    description: 'read book',
-    completed: true,
-    index: 1,
-  },
-];
+const mainContainer = document.querySelector('#task-container');
 
-const listFunc = () => {
-  const taskContent = document.querySelector('#task-container');
-  for (let i = 0; i < tasks.length; i += 1) {
-    const task = document.createElement('div');
-    task.classList.add('task');
-    task.innerHTML = `
-    <button class="checkTask"><i class="fa-solid fa-check"></i></button>
-    <label for="${tasks.index}" contentEditable="true">${tasks[i].description}</label>
-    <button class="deleteTask"><i class="fa-solid fa-trash-can"></i></button>
-    `;
-    taskContent.appendChild(task);
-  }
+const populateAllTodo = () => {
+  mainContainer.innerHTML = '';
+  const todoList = JSON.parse(localStorage.getItem('todo'));
+
+  todoList.sort((x, y) => x.index - y.index);
+
+  todoList.forEach((todo) => {
+    populateTodo(todo);
+  });
 };
 
-listFunc();
+const todoItem = document.querySelector('#input-task');
+const addBtn = document.querySelector('#add-task');
+addBtn.addEventListener('click', () => {
+  let todoList = [];
+  if (localStorage.getItem('todo')) {
+    todoList = JSON.parse(localStorage.getItem('todo'));
+  }
+  const todo = new Todo(todoItem.value, false, todoList.length + 1);
+  saveTodo(todo);
+  populateAllTodo();
+  todoItem.value = '';
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  populateAllTodo();
+});

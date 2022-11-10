@@ -107,11 +107,17 @@ input:hover {
   margin: 5px;
 }
 
+.todo-p {
+  flex: 5;
+  font-size: 16px;
+}
+
 .task button {
   flex: 0.3;
   border-radius: 10px;
   background-color: #fff;
   cursor: pointer;
+  margin-right: 5px;
 }
 
 .task .checkTask {
@@ -121,6 +127,17 @@ input:hover {
   font-size: 1.3rem;
 }
 
+.task .editTask {
+  border: black 2px solid;
+  padding: 4px;
+  background-color: rgb(241, 247, 245);
+}
+
+.task .editTask:hover {
+  background-color: #4d0418;
+  color: #fff;
+}
+
 .task .checkTask:hover {
   color: #fff;
   background-color: orange;
@@ -128,7 +145,8 @@ input:hover {
 
 .task .deleteTask {
   color: red;
-  margin-right: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
   border: 2px solid red;
   font-size: 1.3rem;
 }
@@ -160,6 +178,14 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+.edit-background {
+  background-color: rgb(243, 243, 176);
 }
 
 @media only screen and (max-width: 768px) {
