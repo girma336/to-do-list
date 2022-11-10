@@ -121,7 +121,7 @@ input:hover {
 }
 
 .task .checkTask {
-  color: orange;
+  color: #fff;
   margin-right: 10px;
   border: 2px solid orange;
   font-size: 1.3rem;
@@ -139,7 +139,7 @@ input:hover {
 }
 
 .task .checkTask:hover {
-  color: #fff;
+  color: orange;
   background-color: orange;
 }
 
