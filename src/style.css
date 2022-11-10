@@ -145,7 +145,13 @@ input:hover {
 
 .task .decor {
   background-color: #fff;
-  color: rgb(77, 255, 0);
+  color: green;
+  border: 2px solid green;
+}
+
+.task .decor:hover {
+  background-color: green;
+  color: #fff;
   border: 2px solid green;
 }
 
