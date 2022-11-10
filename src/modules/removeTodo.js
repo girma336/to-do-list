@@ -7,7 +7,7 @@ const removeTodo = (index) => {
     i += 1;
   });
   localStorage.setItem('todo', JSON.stringify(todoList));
-   window.location.reload();
+  window.location.reload();
 };
 
 export default removeTodo;
