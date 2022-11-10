@@ -106,10 +106,12 @@ input:hover {
   font-size: 1.3rem;
   margin: 5px;
 }
+
 .todo-p {
   flex: 5;
   font-size: 16px;
 }
+
 .task button {
   flex: 0.3;
   border-radius: 10px;
@@ -185,7 +187,6 @@ footer {
 .edit-background {
   background-color: rgb(243, 243, 176);
 }
-
 
 @media only screen and (max-width: 768px) {
   section {

@@ -4,7 +4,6 @@ import populateTodo from './modules/populateTodo.js';
 import saveTodo from './modules/saveTodo.js';
 import Todo from './modules/Todo.js';
 
-
 const mainContainer = document.querySelector('#task-container');
 
 const populateAllTodo = () => {
@@ -18,7 +17,7 @@ const populateAllTodo = () => {
   });
 };
 
-const todoItem = document.querySelector('#input-task')
+const todoItem = document.querySelector('#input-task');
 const addBtn = document.querySelector('#add-task');
 addBtn.addEventListener('click', () => {
   let todoList = [];

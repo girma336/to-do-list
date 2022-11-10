@@ -1,6 +1,5 @@
 import removeTodo from './removeTodo.js';
 import editTodo from './editTodo.js';
-import saveTodo from './saveTodo.js';
 
 const mainContainer = document.querySelector('#task-container');
 const populateTodo = (todo) => {
@@ -10,9 +9,8 @@ const populateTodo = (todo) => {
   const todoCheck = document.createElement('button');
   todoCheck.className = 'checkTask';
   const i1 = document.createElement('i');
-  i1.className = "fa-solid fa-check";
+  i1.className = 'fa-solid fa-check';
   todoCheck.appendChild(i1);
-
 
   div.appendChild(todoCheck);
 
@@ -31,11 +29,10 @@ const populateTodo = (todo) => {
   miniForm.appendChild(input);
   div.appendChild(miniForm);
 
-
   const editIcon = document.createElement('button');
   editIcon.classList = 'editTask';
-  editIcon.innerHTML = `<i class="fa-solid fa-edit"></i>`;
-  
+  editIcon.innerHTML = '<i class="fa-solid fa-edit"></i>';
+
   div.appendChild(editIcon);
 
   editIcon.addEventListener('click', () => {
@@ -47,8 +44,8 @@ const populateTodo = (todo) => {
   });
 
   const deleteIcon = document.createElement('button');
-  deleteIcon.className = "deleteTask";
-  deleteIcon.innerHTML = `<i class="fa-solid fa-trash-can"></i>`;
+  deleteIcon.className = 'deleteTask';
+  deleteIcon.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
   div.appendChild(deleteIcon);
 
   deleteIcon.addEventListener('click', () => {
@@ -59,7 +56,6 @@ const populateTodo = (todo) => {
     e.preventDefault();
     editTodo(input.value, todo.index);
   });
-
 
   mainContainer.appendChild(div);
 };
