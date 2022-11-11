@@ -8,7 +8,9 @@
     "watch": "webpack --watch",
     "start": "webpack serve --open",
     "server": "node server.js",
+    "deploy": "gh-pages -d dist",
     "build": "webpack"
+
   },
   "repository": {
     "type": "git",
@@ -20,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/girma336/to-do-list/issues"
   },
-  "homepage": "https://github.com/girma336/to-do-list#readme",
+  "homepage": "https://girma336.github.io/to-do-list",
   "devDependencies": {
     "css-loader": "^6.7.1",
     "express": "^4.18.2",
@@ -32,6 +34,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
+    "gh-pages": "^4.0.0",
     "lodash": "^4.17.21"
   }
 }
