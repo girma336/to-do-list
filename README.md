@@ -6,8 +6,11 @@ In this project, you will implement the CRUD (create, read, update, delete) meth
 - HTML & CSS
 - JavaScript
 - webpack server
-- LUXON.JS MODULE
+- MODULE
 
+## gh-pages
+- Deploy a secure website using OpenSSL
+- [See Live](https://girma336.github.io/to-do-list)
 
 ## Getting Started
 
@@ -22,7 +25,7 @@ To get a local copy up and running follow these simple example steps.
 
 1. Clone the repo
 ```sh
-   git clone https://github.com/girma336/protrfolio.git
+   git clone https://github.com/girma336/'
 ```
 2. Install NPM packages
 ```sh
