@@ -23,10 +23,12 @@ addBtn.addEventListener('click', () => {
   if (localStorage.getItem('todo')) {
     todoList = JSON.parse(localStorage.getItem('todo'));
   }
+  if(todoItem.value !== ""){
   const todo = new Todo(todoItem.value, false, todoList.length + 1);
   saveTodo(todo);
   populateAllTodo();
   todoItem.value = '';
+  }
 });
 
 document.addEventListener('DOMContentLoaded', () => {

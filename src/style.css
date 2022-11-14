@@ -62,7 +62,7 @@ section {
   padding-bottom: 5px;
 }
 
-input {
+input, .task input {
   width: 100%;
   flex: 5;
   font-size: 1.2rem;
